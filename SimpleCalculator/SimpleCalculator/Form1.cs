@@ -45,8 +45,19 @@ namespace SimpleCalculator
         {
             double num1 = Convert.ToDouble(textBox1.Text);
             double num2 = Convert.ToDouble(textBox2.Text);
-            double quotient = num1 / num2;
-            textBox3.Text = quotient.ToString();
+            double quotient = 0.0;
+            quotient = num1 / num2;
+
+            if(num2 != 0 && num1 !=0)
+            {
+                textBox3.Text = quotient.ToString();
+            }
+            else
+            {
+                String message = "Division of {0} by zero.";
+                textBox3.Text = message;
+
+            }
         }
     }
 }
