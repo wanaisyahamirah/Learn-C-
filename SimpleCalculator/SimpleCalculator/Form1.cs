@@ -54,7 +54,7 @@ namespace SimpleCalculator
             }
             else
             {
-                String message = "Division of {0} by zero.";
+                String message = "Division by zero.";
                 textBox3.Text = message;
 
             }
