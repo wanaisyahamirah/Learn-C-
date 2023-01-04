@@ -25,6 +25,12 @@ namespace SimpleCalculator
             textBox3.Text = sum.ToString();
         }
 
+        public static double Summation(double num1, double num2)
+        {
+            double result = num1 + num2;
+            return result;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             double num1 = Convert.ToDouble(textBox1.Text);
@@ -33,12 +39,24 @@ namespace SimpleCalculator
             textBox3.Text = difference.ToString();
         }
 
+        public static double Difference(double num1, double num2)
+        {
+            double result = num1 - num2;
+            return result;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             double num1 = Convert.ToDouble(textBox1.Text);
             double num2 = Convert.ToDouble(textBox2.Text);
             double multiplication = num1 * num2;
             textBox3.Text = multiplication.ToString();
+        }
+
+        public static double Multiplication(double num1, double num2)
+        {
+            double result = num1 * num2;
+            return result;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -58,6 +76,12 @@ namespace SimpleCalculator
                 textBox3.Text = message;
 
             }
+        }
+
+        public static double Division(double num1, double num2)
+        {
+            double result = num1 / num2;
+            return result;
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace SimpleCalculator
+﻿using System.Windows.Forms;
+using SimpleCalculator;
+
+namespace SimpleCalculator
 {
     partial class Form1
     {
