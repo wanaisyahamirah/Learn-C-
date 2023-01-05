@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+namespace MyFirstCalculatorTest
 {
     [TestClass]
     public class UnitTest1
@@ -10,8 +10,14 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
 
-            //SimpleCalculator.
+            //Arrange
+            MyFirstCalculator.CalculatorFunction sumMethod = new MyFirstCalculator.CalculatorFunction();
 
+
+
+            //
+
+            //
         }
     }
 }

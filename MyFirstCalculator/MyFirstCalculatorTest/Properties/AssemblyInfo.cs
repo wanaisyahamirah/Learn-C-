@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("SimpleCalculatorUnitTest")]
+[assembly: AssemblyTitle("MyFirstCalculatorTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SimpleCalculatorUnitTest")]
+[assembly: AssemblyProduct("MyFirstCalculatorTest")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("5ddec2c1-219f-44a6-b919-595b73be70b6")]
+[assembly: Guid("a5a3b24e-a1de-49f6-9a79-292217548345")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
