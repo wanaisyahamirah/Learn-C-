@@ -30,23 +30,23 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.groupBoxServerAuthentication = new System.Windows.Forms.GroupBox();
+            this.btnConnectServer = new System.Windows.Forms.Button();
             this.txtServerName = new System.Windows.Forms.TextBox();
             this.lblServerName = new System.Windows.Forms.Label();
             this.groupBoxDatabase = new System.Windows.Forms.GroupBox();
             this.cbDbName = new System.Windows.Forms.ComboBox();
             this.lblDatabaseName = new System.Windows.Forms.Label();
             this.groupBoxOutputPath = new System.Windows.Forms.GroupBox();
-            this.lblBackupPath = new System.Windows.Forms.Label();
-            this.txtLocation = new System.Windows.Forms.TextBox();
-            this.btnConnectServer = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.btnBackup = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtLocation = new System.Windows.Forms.TextBox();
+            this.lblBackupPath = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerBackup = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.progressBarBackup = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBoxServerAuthentication.SuspendLayout();
             this.groupBoxDatabase.SuspendLayout();
@@ -77,6 +77,18 @@
             this.groupBoxServerAuthentication.TabIndex = 5;
             this.groupBoxServerAuthentication.TabStop = false;
             this.groupBoxServerAuthentication.Text = "SQL Server Authentication";
+            // 
+            // btnConnectServer
+            // 
+            this.btnConnectServer.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnConnectServer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConnectServer.Location = new System.Drawing.Point(445, 32);
+            this.btnConnectServer.Name = "btnConnectServer";
+            this.btnConnectServer.Size = new System.Drawing.Size(156, 23);
+            this.btnConnectServer.TabIndex = 2;
+            this.btnConnectServer.Text = "Connect";
+            this.btnConnectServer.UseVisualStyleBackColor = false;
+            this.btnConnectServer.Click += new System.EventHandler(this.btnConnectServer_Click);
             // 
             // txtServerName
             // 
@@ -139,54 +151,12 @@
             this.groupBoxOutputPath.Controls.Add(this.btnBrowse);
             this.groupBoxOutputPath.Controls.Add(this.txtLocation);
             this.groupBoxOutputPath.Controls.Add(this.lblBackupPath);
-            this.groupBoxOutputPath.Location = new System.Drawing.Point(12, 369);
+            this.groupBoxOutputPath.Location = new System.Drawing.Point(12, 279);
             this.groupBoxOutputPath.Name = "groupBoxOutputPath";
             this.groupBoxOutputPath.Size = new System.Drawing.Size(623, 72);
             this.groupBoxOutputPath.TabIndex = 7;
             this.groupBoxOutputPath.TabStop = false;
             this.groupBoxOutputPath.Text = "Backup Configuration";
-            // 
-            // lblBackupPath
-            // 
-            this.lblBackupPath.AutoSize = true;
-            this.lblBackupPath.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBackupPath.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBackupPath.Location = new System.Drawing.Point(7, 37);
-            this.lblBackupPath.Name = "lblBackupPath";
-            this.lblBackupPath.Size = new System.Drawing.Size(55, 14);
-            this.lblBackupPath.TabIndex = 0;
-            this.lblBackupPath.Text = "Location:";
-            // 
-            // txtLocation
-            // 
-            this.txtLocation.Location = new System.Drawing.Point(113, 34);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(310, 20);
-            this.txtLocation.TabIndex = 2;
-            // 
-            // btnConnectServer
-            // 
-            this.btnConnectServer.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnConnectServer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConnectServer.Location = new System.Drawing.Point(445, 32);
-            this.btnConnectServer.Name = "btnConnectServer";
-            this.btnConnectServer.Size = new System.Drawing.Size(156, 23);
-            this.btnConnectServer.TabIndex = 2;
-            this.btnConnectServer.Text = "Connect";
-            this.btnConnectServer.UseVisualStyleBackColor = false;
-            this.btnConnectServer.Click += new System.EventHandler(this.btnConnectServer_Click);
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBrowse.Location = new System.Drawing.Point(445, 31);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 6;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = false;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnBackup
             // 
@@ -200,16 +170,54 @@
             this.btnBackup.UseVisualStyleBackColor = false;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBrowse.Location = new System.Drawing.Point(445, 31);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 6;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // txtLocation
+            // 
+            this.txtLocation.Location = new System.Drawing.Point(113, 34);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(310, 20);
+            this.txtLocation.TabIndex = 2;
+            // 
+            // lblBackupPath
+            // 
+            this.lblBackupPath.AutoSize = true;
+            this.lblBackupPath.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBackupPath.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBackupPath.Location = new System.Drawing.Point(7, 37);
+            this.lblBackupPath.Name = "lblBackupPath";
+            this.lblBackupPath.Size = new System.Drawing.Size(55, 14);
+            this.lblBackupPath.TabIndex = 0;
+            this.lblBackupPath.Text = "Location:";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePickerBackup);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 278);
+            this.groupBox1.Location = new System.Drawing.Point(12, 467);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(623, 72);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Backup Schedule";
+            // 
+            // dateTimePickerBackup
+            // 
+            this.dateTimePickerBackup.Location = new System.Drawing.Point(113, 34);
+            this.dateTimePickerBackup.Name = "dateTimePickerBackup";
+            this.dateTimePickerBackup.Size = new System.Drawing.Size(488, 20);
+            this.dateTimePickerBackup.TabIndex = 1;
+            this.dateTimePickerBackup.Visible = false;
             // 
             // label1
             // 
@@ -222,23 +230,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Date/Time:";
             // 
-            // dateTimePickerBackup
-            // 
-            this.dateTimePickerBackup.Location = new System.Drawing.Point(113, 34);
-            this.dateTimePickerBackup.Name = "dateTimePickerBackup";
-            this.dateTimePickerBackup.Size = new System.Drawing.Size(488, 20);
-            this.dateTimePickerBackup.TabIndex = 1;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.progressBarBackup);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 461);
+            this.groupBox2.Location = new System.Drawing.Point(12, 372);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(623, 72);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Backup Status";
+            // 
+            // progressBarBackup
+            // 
+            this.progressBarBackup.Location = new System.Drawing.Point(113, 32);
+            this.progressBarBackup.Name = "progressBarBackup";
+            this.progressBarBackup.Size = new System.Drawing.Size(488, 23);
+            this.progressBarBackup.TabIndex = 1;
             // 
             // label2
             // 
@@ -251,18 +259,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Progress:";
             // 
-            // progressBarBackup
-            // 
-            this.progressBarBackup.Location = new System.Drawing.Point(113, 32);
-            this.progressBarBackup.Name = "progressBarBackup";
-            this.progressBarBackup.Size = new System.Drawing.Size(488, 23);
-            this.progressBarBackup.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 561);
+            this.ClientSize = new System.Drawing.Size(647, 577);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxOutputPath);
