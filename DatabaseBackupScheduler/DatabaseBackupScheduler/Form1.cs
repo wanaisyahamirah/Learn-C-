@@ -122,14 +122,14 @@ namespace DatabaseBackupScheduler
             try
             {
                 BackupDatabase(dbName, backupFilePath);
-                MessageBox.Show("Database Backup Successfully Completed! \nLocation: " + backupFilePath, "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Database Backup:" + dbName + " Successfully Completed! Location: " + backupFilePath, "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Location", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFileExist(backupFilePath);
+                MessageBox.Show(ex.Message, "Database Backup:" + dbName + " Failed! Location:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Cursor = Cursors.Default;
-            isFileExist(backupFilePath);
         }
 
         private void BackupDatabase(String dbName, String fileName)
@@ -154,11 +154,7 @@ namespace DatabaseBackupScheduler
 
         private void isFileExist(String backupFilePath)
         {
-            if (File.Exists(backupFilePath))
-            {
-                MessageBox.Show(backupFilePath + " file exists!");
-            }
-            else
+            if (!File.Exists(backupFilePath))
             {
                 MessageBox.Show(backupFilePath + " file does not exist.");
             }
