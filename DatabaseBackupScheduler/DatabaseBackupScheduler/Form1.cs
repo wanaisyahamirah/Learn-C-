@@ -53,7 +53,7 @@ namespace DatabaseBackupScheduler
                     cbDbName.Enabled = true;
                     btnBrowse.Enabled = true;
                     btnBackup.Enabled = true;
-                    txtLocation.Enabled = true;
+                    txtLocation.Enabled = false;
                     dateTimePickerBackup.Enabled = true;
                 }
             }
@@ -65,11 +65,10 @@ namespace DatabaseBackupScheduler
         
         private void cbDbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbDbName.SelectedIndex != 0)
+            if (cbDbName.SelectedIndex != 0)
             {
                 txtLocation.Enabled = true;
                 btnBrowse.Enabled = true;
-                txtLocation.Enabled = true;
             }
             else
             {
@@ -78,12 +77,11 @@ namespace DatabaseBackupScheduler
                 btnBrowse.Enabled = false;
                 btnBrowse.Enabled = true;
             }
-            txtLocation.Clear();
         }
 
         private void txtServerName_TextChanged(object sender, EventArgs e)
         {
-            if(txtLocation.Text.Trim() != string.Empty)
+            if (txtLocation.Text.Trim() != string.Empty)
             {
                 btnBackup.Enabled = true;
             }
@@ -95,7 +93,7 @@ namespace DatabaseBackupScheduler
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            if(folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 txtLocation.Text = folderBrowserDialog1.SelectedPath;
             }
@@ -103,23 +101,33 @@ namespace DatabaseBackupScheduler
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
+
+            String dbName = cbDbName.Text;
+            String location = txtLocation.Text.Trim();
+
+            if (string.IsNullOrEmpty(location))
+            {
+                MessageBox.Show("Please select the location for the backup file.");
+                Cursor = Cursors.Default;
+                return;
+            }
+
+            String backupFilePath = location + "\\" + dbName + "_" + DateTime.Now.ToString("yyyyMMdd") + ".bak";
+
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    sql = "BACKUP DATABASE " + cbDbName.Text + " TO DISK = '" + txtLocation.Text.Trim() + "\\" + cbDbName.Text + "_" + DateTime.Now.ToString("yyyyMMdd") + ".bak'";
-                    cmd = new SqlCommand(sql, connection);
-                    cmd.ExecuteNonQuery();
-                }
-                connection.Dispose();
-                MessageBox.Show("Database Backup Successfully Completed!", "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                BackupDatabase(dbName, backupFilePath);
+                MessageBox.Show("Database Backup Successfully Completed! \nLocation: " + backupFilePath, "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Location", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Cursor = Cursors.Default;
+            isFileExist(backupFilePath);
         }
+
+
     }
 }
