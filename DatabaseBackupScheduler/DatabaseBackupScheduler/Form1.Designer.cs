@@ -41,18 +41,18 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.lblBackupPath = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerBackup = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.progressBarBackup = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePickerBackup = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxServerAuthentication.SuspendLayout();
             this.groupBoxDatabase.SuspendLayout();
             this.groupBoxOutputPath.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -200,36 +200,6 @@
             this.lblBackupPath.TabIndex = 0;
             this.lblBackupPath.Text = "Location:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dateTimePickerBackup);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 467);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(623, 72);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Backup Schedule";
-            // 
-            // dateTimePickerBackup
-            // 
-            this.dateTimePickerBackup.Location = new System.Drawing.Point(113, 34);
-            this.dateTimePickerBackup.Name = "dateTimePickerBackup";
-            this.dateTimePickerBackup.Size = new System.Drawing.Size(488, 20);
-            this.dateTimePickerBackup.TabIndex = 1;
-            this.dateTimePickerBackup.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(7, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Date/Time:";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.progressBarBackup);
@@ -259,6 +229,37 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Progress:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(7, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Date/Time:";
+            // 
+            // dateTimePickerBackup
+            // 
+            this.dateTimePickerBackup.Location = new System.Drawing.Point(113, 34);
+            this.dateTimePickerBackup.Name = "dateTimePickerBackup";
+            this.dateTimePickerBackup.Size = new System.Drawing.Size(488, 20);
+            this.dateTimePickerBackup.TabIndex = 1;
+            this.dateTimePickerBackup.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePickerBackup);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.Silver;
+            this.groupBox1.Location = new System.Drawing.Point(12, 467);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(623, 72);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Backup Schedule";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,10 +281,10 @@
             this.groupBoxDatabase.PerformLayout();
             this.groupBoxOutputPath.ResumeLayout(false);
             this.groupBoxOutputPath.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,13 +305,13 @@
         private System.Windows.Forms.Button btnConnectServer;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnBackup;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBackup;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ProgressBar progressBarBackup;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBackup;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
