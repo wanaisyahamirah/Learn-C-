@@ -56,21 +56,7 @@ namespace DatabaseBackupScheduler
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void btnDisconnectServer_Click(object sender, EventArgs e)
-        {
-            txtServerName.Enabled = true;
-            btnConnectServer.Enabled = true;
-            cbDbName.Items.Clear();
-            cbDbName.Items.Add("Please select a database to backup");
-            cbDbName.SelectedIndex = 0;
-            cbDbName.Enabled = false;
-            btnBrowse.Enabled = false;
-            btnBackup.Enabled = false;
-            txtLocation.Enabled = false;
-            dateTimePickerBackup.Enabled = false;
-        }
-
+        
         private void cbDbName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbDbName.SelectedIndex != 0)
