@@ -128,6 +128,36 @@ namespace DatabaseBackupScheduler
             isFileExist(backupFilePath);
         }
 
+        private void BackupDatabase(String dbName, String fileName)
+        {
+            log(fileName);
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                sql = "BACKUP DATABASE " + dbName + " TO DISK = '" + fileName + "'";
+                cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteNonQuery();
+            }
+            connection.Dispose();
+
+        }
+
+        private void log(String message)
+        {
+            Console.WriteLine(message);
+        }
+
+        private void isFileExist(String backupFilePath)
+        {
+            if (File.Exists(backupFilePath))
+            {
+                MessageBox.Show(backupFilePath + " file exists!");
+            }
+            else
+            {
+                MessageBox.Show(backupFilePath + " file does not exist.");
+            }
+        }
     }
 }
