@@ -31,6 +31,8 @@ namespace DatabaseBackupScheduler
 
         private void btnConnectServer_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
+
             try
             {
                 connectionString = "Data Source = " + txtServerName.Text.Trim() + "; Trusted_Connection = True;";
@@ -61,6 +63,8 @@ namespace DatabaseBackupScheduler
             {
                 MessageBox.Show(ex.Message);
             }
+
+            Cursor = Cursors.Default;
         }
         
         private void cbDbName_SelectedIndexChanged(object sender, EventArgs e)
