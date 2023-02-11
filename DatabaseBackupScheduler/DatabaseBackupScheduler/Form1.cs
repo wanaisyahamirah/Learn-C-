@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DatabaseBackupScheduler
 {
@@ -10,7 +11,7 @@ namespace DatabaseBackupScheduler
         private SqlCommand cmd;
         private SqlDataReader reader;
         String sql = "";
-        String connectionString = "";
+        String connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True";
 
         public Form1()
         {
@@ -21,6 +22,11 @@ namespace DatabaseBackupScheduler
         {
             txtServerName.Text = System.Net.Dns.GetHostName().ToUpper() + @"\SQLEXPRESS";
             cbDbName.SelectedIndex = 0;
+            txtLocation.Text = @"D:\DatabaseBackupScheduler\DatabaseBackupOutput";
+            cbDbName.Enabled = false;
+            btnBrowse.Enabled = false;
+            btnBackup.Enabled = false;
+            txtLocation.Enabled = false;
         }
 
         private void btnConnectServer_Click(object sender, EventArgs e)
