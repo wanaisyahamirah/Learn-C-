@@ -139,7 +139,7 @@ namespace DatabaseBackupScheduler
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                sql = "BACKUP DATABASE " + dbName + " TO DISK = '" + fileName + "'";
+                sql = "BACKUP DATABASE " + dbName + " TO DISK = '" + fileName + "' with init";
                 cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
             }
