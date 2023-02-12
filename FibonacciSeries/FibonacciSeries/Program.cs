@@ -13,7 +13,10 @@ namespace FibonacciSeries
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
 
-            GetFibonacciSeriesWithoutRecursion(7);
+            Console.Write("Without Recursion: ");
+            GetFibonacciSeriesWithoutRecursion(10);
+            Console.Write("\nWith Recursion: ");
+            GetFibonacciSeriesWithRecursion(10);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -43,7 +46,20 @@ namespace FibonacciSeries
 
         static void GetFibonacciSeriesWithRecursion(int numOfTerms)
         {
+            List<int> fibonacciSeries = new List<int>();
+            GenerateFibonacciSeries(numOfTerms, 0, 1, fibonacciSeries);
+            PrintSeriesWithComma(fibonacciSeries);
+        }
 
+        static void GenerateFibonacciSeries(int remainingTerms, int prevTerm, int currentTerm, List<int> fibonacciSeries)
+        {
+            if (remainingTerms == 0)
+            {
+                return;
+            }
+
+            fibonacciSeries.Add(prevTerm);
+            GenerateFibonacciSeries(remainingTerms - 1, currentTerm, prevTerm + currentTerm, fibonacciSeries);
         }
 
         static void PrintSeriesWithComma (List<int> fibonacciSeries)
