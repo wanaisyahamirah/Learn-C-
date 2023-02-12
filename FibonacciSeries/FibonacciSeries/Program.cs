@@ -26,20 +26,28 @@ namespace FibonacciSeries
             prevTerm = 0;
             currentTerm = 1;
             counter = 0;
+            List<int> fibonacciSeries = new List<int>();
 
             while (counter < numOfTerms)
             {
-                Console.Write(prevTerm + ", ");
+                fibonacciSeries.Add(prevTerm);
                 sumPrevCurrent = prevTerm + currentTerm;
                 prevTerm = currentTerm;
                 currentTerm = sumPrevCurrent;
                 counter++;
             }
+
+            PrintSeriesWithComma(fibonacciSeries);
+
         }
 
-        static void PrintSeriesWithComma (int term)
+        static void PrintSeriesWithComma (List<int> fibonacciSeries)
         {
-
+            for (int i = 0; i < fibonacciSeries.Count - 1; i++)
+            {
+                Console.Write(fibonacciSeries[i] + ", ");
+            }
+            Console.Write(fibonacciSeries[fibonacciSeries.Count - 1]);
         }
     }    
 }
