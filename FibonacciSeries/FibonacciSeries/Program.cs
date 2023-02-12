@@ -14,7 +14,6 @@ namespace FibonacciSeries
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
 
             GetFibonacciSeriesWithoutRecursion(7);
-            Console.WriteLine("Hello World!");
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -30,7 +29,7 @@ namespace FibonacciSeries
 
             while (counter < numOfTerms)
             {
-                Console.WriteLine(prevTerm + ", ");
+                Console.Write(prevTerm + ", ");
                 sumPrevCurrent = prevTerm + currentTerm;
                 prevTerm = currentTerm;
                 currentTerm = sumPrevCurrent;
