@@ -17,5 +17,25 @@ namespace PrimeNumber
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static Boolean IsPrimeNumber(int num)
+        {
+            if (num <= 1)
+            {
+                return false;
+            }
+
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        
     }
 }
