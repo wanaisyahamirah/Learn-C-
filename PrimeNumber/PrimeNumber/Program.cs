@@ -46,7 +46,7 @@ namespace PrimeNumber
 
         static void GetPrimeNumber(int num)
         {
-            Boolean isPrimeNum;
+            Boolean isPrimeNum = true;
 
             if (num <= 1)
             {
