@@ -52,16 +52,17 @@ namespace PrimeNumber
             {
                 isPrimeNum = false;
             }
-
-            for (int i = 2; i <= Math.Sqrt(num); i++)
+            else
             {
-                if (num % i == 0)
+                for (int i = 2; i <= Math.Sqrt(num); i++)
                 {
-                    isPrimeNum = false;
+                    if (num % i == 0)
+                    {
+                        isPrimeNum = false;
+                        break;
+                    }
                 }
             }
-
-            isPrimeNum = true;
 
             PrintMessage(num, isPrimeNum);
         }
@@ -84,4 +85,22 @@ namespace PrimeNumber
             return Convert.ToInt32(Console.ReadLine());
         }
     }
+
+    /*
+        Explanation:
+
+        IsPrimeNumber is a method that takes an integer argument num and returns a Boolean value indicating whether the num is prime or not. 
+        This method determines whether the given num is prime or not by checking if num is less than or equal to 1, in which case it returns false. 
+        If num is greater than 1, it checks whether num is divisible by any number from 2 to the square root of num. 
+        If it is divisible, then the method returns false, indicating that num is not prime. 
+        If num is not divisible by any of these numbers, the method returns true, indicating that num is prime.
+
+        GetPrimeNumber is a method that takes an integer argument num and prints a message indicating whether the num is prime or not. 
+        This method uses the IsPrimeNumber method to determine if num is prime, and if it is, it prints a message indicating that num is prime. 
+        If num is not prime, it also prints a message indicating that num is not prime.
+
+        The main difference between these two methods is that IsPrimeNumber returns a Boolean value indicating whether num is prime or not, 
+        while GetPrimeNumber prints a message indicating whether num is prime or not.
+     
+     */
 }
