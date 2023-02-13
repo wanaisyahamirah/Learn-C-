@@ -72,6 +72,10 @@ namespace PrimeNumber
             }
         }
 
-        //static void 
+        static int GetUserInput()
+        {
+            Console.Write("Enter a number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
     }
 }
