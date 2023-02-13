@@ -12,9 +12,15 @@ namespace PrimeNumber
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            int num = 5;
+            int num = GetUserInput();
+
+            Console.WriteLine("Method 1 --You entered: " + num);
             Boolean isPrimeNum = IsPrimeNumber(num);
             PrintMessage(num, isPrimeNum);
+
+            Console.WriteLine("Method 2 --You entered: " + num);
+            GetPrimeNumber(num);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
