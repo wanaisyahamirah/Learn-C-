@@ -21,7 +21,7 @@ namespace PalindromeNumber
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
 
             int num = GetUserInput();
-
+            Boolean isPali = IsPalindrome(num);
 
             Console.ReadKey();
 
@@ -39,8 +39,10 @@ namespace PalindromeNumber
             return inputNumber.ToString();
         }
 
-        static Boolean IsPalindrome(String inputString)
+        static Boolean IsPalindrome(int inputNumber)
         {
+            String inputString =ConvertNumToString(inputNumber);
+
             // Set up two pointers, one at the beginning and one at the end of the string
             int start = 0;
             int end = inputString.Length - 1;
