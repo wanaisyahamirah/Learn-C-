@@ -14,11 +14,15 @@ namespace PalindromeNumber
             A palindromic number (also known as a numeral palindrome or a numeric palindrome) 
             is a number (such as 16461) that remains the same when its digits are reversed.
         */
+
         static void Main(string[] args)
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+
+            int num = GetUserInput();
+
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -56,6 +60,17 @@ namespace PalindromeNumber
             // If the pointers have met in the middle, the number is a palindrome
             return true;
         }
-
+        
+        static void PrintMessage(String inputString, Boolean isPalindrome)
+        {
+            if (isPalindrome)
+            {
+                Console.WriteLine(inputString + " is Palindrome Number");
+            }
+            else
+            {
+                Console.WriteLine(inputString + " is not Palindrome Number");
+            }
+        }
     }
 }
