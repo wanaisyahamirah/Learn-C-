@@ -13,6 +13,11 @@ namespace PalindromeNumber
             -- Wikipedia
             A palindromic number (also known as a numeral palindrome or a numeric palindrome) 
             is a number (such as 16461) that remains the same when its digits are reversed.
+
+            -- Lesson learned
+            Learn to compare numbers beginninh and end
+            If reach middle then it is palindrome
+            Means numbers before middle are match
         */
 
         static void Main(string[] args)
