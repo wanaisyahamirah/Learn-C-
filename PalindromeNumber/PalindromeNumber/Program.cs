@@ -22,7 +22,7 @@ namespace PalindromeNumber
 
             int num = GetUserInput();
             Boolean isPali = IsPalindrome(num);
-
+            PrintMessage(num, isPali);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -63,15 +63,15 @@ namespace PalindromeNumber
             return true;
         }
         
-        static void PrintMessage(String inputString, Boolean isPalindrome)
+        static void PrintMessage(int inputNumber, Boolean isPalindrome)
         {
             if (isPalindrome)
             {
-                Console.WriteLine(inputString + " is Palindrome Number");
+                Console.WriteLine(inputNumber + " is Palindrome Number");
             }
             else
             {
-                Console.WriteLine(inputString + " is not Palindrome Number");
+                Console.WriteLine(inputNumber + " is not Palindrome Number");
             }
         }
     }
