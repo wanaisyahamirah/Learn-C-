@@ -30,6 +30,32 @@ namespace PalindromeNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        
+        static String ConvertNumToString(int inputNumber)
+        {
+            return inputNumber.ToString();
+        }
+
+        static Boolean IsPalindrome(String inputString)
+        {
+            // Set up two pointers, one at the beginning and one at the end of the string
+            int start = 0;
+            int end = inputString.Length - 1;
+
+            // Compare the characters at each pointer position and move the pointers inward until they meet in the middle
+            while (start < end)
+            {
+                if (inputString[start] != inputString[end])
+                {
+                    // The characters don't match, so the number is not a palindrome
+                    return false;
+                }
+                start++;
+                end--;
+            }
+
+            // If the pointers have met in the middle, the number is a palindrome
+            return true;
+        }
+
     }
 }
