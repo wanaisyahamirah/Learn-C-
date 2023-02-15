@@ -37,6 +37,10 @@ namespace FactorialNumber
             return result;
         }
 
-        
+        static void PrintMessage(int inputNumber, int result)
+        {
+            Console.WriteLine("Factorial of " + inputNumber + " is " + result);
+        }
+
     }
 }
