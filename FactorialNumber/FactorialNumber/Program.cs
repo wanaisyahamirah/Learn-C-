@@ -27,8 +27,15 @@ namespace FactorialNumber
 
         static int GetFactorial(int inputNumber)
         {
+            int result = 1;
 
+            for(int i = 1; i <= inputNumber; i++)
+            {
+                return result = result * i;
+            }
         }
+
+        
 
     }
 }
