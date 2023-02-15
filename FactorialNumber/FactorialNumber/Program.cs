@@ -29,13 +29,14 @@ namespace FactorialNumber
         {
             int result = 1;
 
-            for(int i = 1; i <= inputNumber; i++)
+            for(int counter = 1; counter <= inputNumber; counter++)
             {
-                return result = result * i;
+                result = result * counter;
             }
+
+            return result;
         }
 
         
-
     }
 }
