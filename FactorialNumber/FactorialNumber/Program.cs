@@ -25,5 +25,10 @@ namespace FactorialNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
+        static int GetFactorial(int inputNumber)
+        {
+
+        }
+
     }
 }
