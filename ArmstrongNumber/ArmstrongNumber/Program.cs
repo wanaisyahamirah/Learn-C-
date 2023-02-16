@@ -20,7 +20,8 @@ namespace ArmstrongNumber
 
         static int GetUserInput()
         {
-            
+            Console.Write("Enter any number: ");
+            return Convert.ToInt32(Console.ReadLine());
         }
     }
 }
