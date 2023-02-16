@@ -64,7 +64,10 @@ namespace ArmstrongNumber
             {
                 Console.WriteLine(inputNumber + " is an Armstrong Number");
             }
-            Console.WriteLine(inputNumber + " is not an Armstrong Number");
+            else
+            {
+                Console.WriteLine(inputNumber + " is not an Armstrong Number");
+            }
         }
     }
 }
