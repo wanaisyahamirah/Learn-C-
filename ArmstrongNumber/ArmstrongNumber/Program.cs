@@ -24,8 +24,36 @@ namespace ArmstrongNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        static IsArmstrongNumber(int num)
+        static Boolean IsArmstrongNumber(int num)
         {
+            int count, temp, sum, digit;
+            count = 0;
+            temp = num;
+
+            while(temp > 0)
+            {
+                count = count + 1;
+                temp = temp / 10;
+            }
+
+            sum = 0;
+            temp = num;
+
+            while (temp > 0)
+            {
+                digit = temp % 10;
+                sum = sum + (int)Math.Pow(digit, count);
+                temp = temp / 10;
+            }
+
+            if (sum == num)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
     }
