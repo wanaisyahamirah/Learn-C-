@@ -56,5 +56,10 @@ namespace ArmstrongNumber
             }
 
         }
+
+        static void PrintMessage(int inputNumber, int result)
+        {
+
+        }
     }
 }
