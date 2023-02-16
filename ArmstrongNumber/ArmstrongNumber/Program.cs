@@ -23,5 +23,10 @@ namespace ArmstrongNumber
             Console.Write("Enter any number: ");
             return Convert.ToInt32(Console.ReadLine());
         }
+
+        static IsArmstrongNumber(int num)
+        {
+
+        }
     }
 }
