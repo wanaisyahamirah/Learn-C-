@@ -66,5 +66,20 @@ namespace SwapTwoNumbers
             Console.WriteLine("a: " + a);
             Console.WriteLine("b: " + b);
         }
+
+        /*
+         In the updated version of the program, 
+         the Main method calls the GetTwoUserInputs method to get the user inputs, 
+         then prints the original values using the PrintInputValues method. 
+         It then calls the SwapTheNumbers method to swap the numbers and 
+         finally prints the swapped values using the PrintOutputValues method. 
+         All the methods have been maintained, 
+         and the SwapTheNumbers method now uses ref parameters to swap the values.
+                   
+         In C#, out and ref are keywords used to pass arguments to a method by reference, rather than by value.
+         ref and out allow a method to modify the original value of a variable passed as an argument, rather than a copy of that value.
+         The difference between ref and out is that ref requires the variable to be initialized before it is passed to the method, 
+         while out does not. When using out, the method must set a value for the variable before it returns.
+        */
     }
 }
