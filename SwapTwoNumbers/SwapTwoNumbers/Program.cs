@@ -32,6 +32,9 @@ namespace SwapTwoNumbers
             Console.WriteLine("Second number: " + secondNumber);
         }
 
-
+        static void PrintInputValues(int inputNumber1, int inputNumber2)
+        {
+            
+        }
     }
 }
