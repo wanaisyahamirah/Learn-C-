@@ -48,6 +48,13 @@ namespace SwapTwoNumbers
 
             // Subtract the original value of b from the new value of a and store the result in a
             a = a - b;
+
+        }
+
+        static void PrintOutputValues(int a, int b)
+        {
+            Console.WriteLine("a: " + a);
+            Console.WriteLine("b: " + b);
         }
     }
 }
