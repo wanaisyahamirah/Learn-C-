@@ -38,20 +38,16 @@ namespace SwapTwoNumbers
             Console.WriteLine("b: " + inputNumber2);
         }
 
-        static void SwapTheNumbers(int inputNumber1, int inputNumber2)
+        static void SwapTheNumbers(int a, int b)
         {
             // Add the two numbers a and b and store the result in a
-            inputNumber1 = inputNumber1 + inputNumber2;
+            a = a + b;
 
             // Subtract b from the new value of a and store the result in b
-            inputNumber2 = inputNumber1 - inputNumber2;
+            b = a - b;
 
             // Subtract the original value of b from the new value of a and store the result in a
-
-            // Print the values of a and b after swapping
-
-            // Exit the program
-
+            a = a - b;
         }
     }
 }
