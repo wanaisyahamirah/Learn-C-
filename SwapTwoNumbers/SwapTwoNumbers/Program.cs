@@ -37,5 +37,10 @@ namespace SwapTwoNumbers
             Console.WriteLine("a: " + inputNumber1);
             Console.WriteLine("b: " + inputNumber2);
         }
+
+        static void SwapTheNumbers(int inputNumber1, int inputNumber2)
+        {
+
+        }
     }
 }
