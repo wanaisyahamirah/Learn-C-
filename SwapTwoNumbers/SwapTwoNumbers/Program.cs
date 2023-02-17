@@ -13,23 +13,34 @@ namespace SwapTwoNumbers
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
 
-            
+            int firstNumber, secondNumber;
+
+            // Get user inputs
+            GetTwoUserInputs(out firstNumber, out secondNumber);
+
+            // Print original values
+            Console.WriteLine("Original values:");
+            PrintInputValues(firstNumber, secondNumber);
+
+            // Swap the numbers
+            SwapTheNumbers(ref firstNumber, ref secondNumber);
+
+            // Print swapped values
+            Console.WriteLine("Swapped values:");
+            PrintOutputValues(firstNumber, secondNumber);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
-        static void GetTwoUserInputs()
+        static void GetTwoUserInputs(out int firstNumber, out int secondNumber)
         {
-            int firstNumber, secondNumber;
             Console.Write("Enter the first number: ");
             firstNumber = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Enter the second number: ");
             secondNumber = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("First number: " + firstNumber);
-            Console.WriteLine("Second number: " + secondNumber);
         }
 
         static void PrintInputValues(int inputNumber1, int inputNumber2)
@@ -38,7 +49,7 @@ namespace SwapTwoNumbers
             Console.WriteLine("b: " + inputNumber2);
         }
 
-        static void SwapTheNumbers(int a, int b)
+        static void SwapTheNumbers(ref int a, ref int b)
         {
             // Add the two numbers a and b and store the result in a
             a = a + b;
@@ -48,9 +59,6 @@ namespace SwapTwoNumbers
 
             // Subtract the original value of b from the new value of a and store the result in a
             a = a - b;
-
-            PrintOutputValues(a, b);
-
         }
 
         static void PrintOutputValues(int a, int b)
