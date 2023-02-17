@@ -34,7 +34,8 @@ namespace SwapTwoNumbers
 
         static void PrintInputValues(int inputNumber1, int inputNumber2)
         {
-            
+            Console.WriteLine("a: " + inputNumber1);
+            Console.WriteLine("b: " + inputNumber2);
         }
     }
 }
