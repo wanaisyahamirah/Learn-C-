@@ -40,6 +40,17 @@ namespace SwapTwoNumbers
 
         static void SwapTheNumbers(int inputNumber1, int inputNumber2)
         {
+            // Add the two numbers a and b and store the result in a
+            inputNumber1 = inputNumber1 + inputNumber2;
+
+            // Subtract b from the new value of a and store the result in b
+            inputNumber2 = inputNumber1 - inputNumber2;
+
+            // Subtract the original value of b from the new value of a and store the result in a
+
+            // Print the values of a and b after swapping
+
+            // Exit the program
 
         }
     }
