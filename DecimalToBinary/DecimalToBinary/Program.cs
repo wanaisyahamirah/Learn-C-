@@ -43,7 +43,8 @@ namespace DecimalToBinary
                 quotient = quotient / 2;
             }
 
-            binaryNum = remainder.ToString() + binaryNum;
+            // add the last quotient to the binary number
+            binaryNum = quotient.ToString() + binaryNum;
 
             return binaryNum;
         }
