@@ -24,6 +24,11 @@ namespace DecimalToBinary
             return Convert.ToInt32(Console.ReadLine());
         }
 
+        static String ConvertDecimalToBinary(int decimalNum)
+        {
+            String binaryNum;
 
+            return binaryNum;
+        } 
     }
 }
