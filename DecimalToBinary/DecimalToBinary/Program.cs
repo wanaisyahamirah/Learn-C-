@@ -17,5 +17,13 @@ namespace DecimalToBinary
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static int GetUserInput()
+        {
+            Console.Write("Enter any number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+
     }
 }
