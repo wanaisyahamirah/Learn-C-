@@ -26,7 +26,21 @@ namespace DecimalToBinary
 
         static String ConvertDecimalToBinary(int decimalNum)
         {
-            String binaryNum;
+            int quotient, remainder;
+            quotient = 0;
+            remainder = 0;
+            String binaryNum = "";
+
+            quotient = decimalNum;
+
+            while (quotient >= 2)
+            {
+                remainder = quotient % 2;
+                binaryNum = remainder.ToString() + binaryNum;
+                quotient = quotient / 2;
+            }
+
+            binaryNum = remainder.ToString() + binaryNum;
 
             return binaryNum;
         } 
