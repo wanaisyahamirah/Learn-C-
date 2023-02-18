@@ -43,6 +43,11 @@ namespace DecimalToBinary
             binaryNum = remainder.ToString() + binaryNum;
 
             return binaryNum;
-        } 
+        }
+
+        static void PrintMessage(int decNum, String binNum)
+        {
+            Console.WriteLine($"The binary equivalent of {decNum} is {binNum}.");
+        }
     }
 }
