@@ -44,5 +44,8 @@ namespace NumberTriangle
                 Console.Write(i);
             }
         }
-    }
+
+        static void PrintDescendingNumbers(int num)
+        {
+        }
 }
