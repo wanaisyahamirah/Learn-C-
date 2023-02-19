@@ -28,5 +28,9 @@ namespace NumberTriangle
                 Console.WriteLine();
             }
         }
-    }
+
+        static void PrintSpaces(int numSpaces)
+        {
+
+        }
 }
