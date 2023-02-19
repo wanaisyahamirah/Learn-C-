@@ -21,6 +21,12 @@ namespace AlphabetTriangle
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
+        static int GetUserInput()
+        {
+            Console.Write("Enter number of rows: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
         static void PrintAlphabetTriangle(int num)
         {
             for (int i = 1; i <= num; i++)
