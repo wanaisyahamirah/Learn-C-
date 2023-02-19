@@ -20,7 +20,20 @@ namespace AlphabetTriangle
 
         static void PrintAlphabetTriangle()
         {
+            int alphabetCount = 1;
+            char currentAlphabet = 'A';
 
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = 1; j <= alphabetCount; j++)
+                {
+                    Console.Write(currentAlphabet + " ");
+                    currentAlphabet++;
+                }
+
+                alphabetCount++;
+                Console.WriteLine();
+            }
         }
     }
 }
