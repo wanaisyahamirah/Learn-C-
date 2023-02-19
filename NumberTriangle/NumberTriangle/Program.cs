@@ -20,7 +20,13 @@ namespace NumberTriangle
         
         static void PrintNumberTriangle(int numRows)
         {
-
+            for (int i = 1; i <= numRows; i++)
+            {
+                PrintSpaces(numRows - i);
+                PrintAscendingNumbers(i);
+                PrintDescendingNumbers(i - 1);
+                Console.WriteLine();
+            }
         }
     }
 }
