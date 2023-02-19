@@ -39,7 +39,10 @@ namespace NumberTriangle
 
         static void PrintAscendingNumbers(int num)
         {
-
+            for(int i = 1; i <= num; i++)
+            {
+                Console.Write(i);
+            }
         }
     }
 }
