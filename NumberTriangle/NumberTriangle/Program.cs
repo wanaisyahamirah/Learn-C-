@@ -31,6 +31,9 @@ namespace NumberTriangle
 
         static void PrintSpaces(int numSpaces)
         {
-
+            for (int i = 0; i < numSpaces; i++)
+            {
+                Console.Write(" ");
+            }
         }
 }
