@@ -17,7 +17,7 @@ namespace NumberTriangle
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
-        
+
         static void PrintNumberTriangle(int numRows)
         {
             for (int i = 1; i <= numRows; i++)
@@ -36,4 +36,10 @@ namespace NumberTriangle
                 Console.Write(" ");
             }
         }
+
+        static void PrintAscendingNumbers(int num)
+        {
+
+        }
+    }
 }
