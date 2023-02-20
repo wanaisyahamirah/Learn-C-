@@ -34,5 +34,8 @@ namespace FibonacciTriangle
             }
         }
 
-    }
+        static void PrintFibonacciTriangle(int n)
+        {
+
+        }
 }
