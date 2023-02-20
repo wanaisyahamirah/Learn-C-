@@ -18,6 +18,12 @@ namespace FibonacciTriangle
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
+        static int GetUserInput()
+        {
+            Console.Write("Enter number of rows: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
         static int Fibonacci(int n)
         {
             if (n == 0)
