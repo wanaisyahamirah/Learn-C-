@@ -96,6 +96,18 @@ namespace ConvertNumberIntoCharacters
             return words;
         }
 
+        static string ConvertThousands(int number)
+        {
+            string words = "";
+
+            if (number > 0)
+            {
+                words = ConvertHundreds(number) + " thousand ";
+            }
+
+            return words;
+        }
+
 
     }
 }
