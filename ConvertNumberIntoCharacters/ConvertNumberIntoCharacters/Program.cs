@@ -17,5 +17,28 @@ namespace ConvertNumberIntoCharacters
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static string ConvertSingleDigit(int number)
+        {
+            string words = "";
+
+            switch (number)
+            {
+                case 1:
+                    words = "one";
+                    break;
+                case 2:
+                    words = "two";
+                    break;
+                // add more cases for other single digits
+                // ...
+                case 9:
+                    words = "nine";
+                    break;
+            }
+
+            return words;
+        }
+
     }
 }
