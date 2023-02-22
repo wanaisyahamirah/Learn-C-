@@ -132,6 +132,43 @@ namespace ConvertNumberIntoCharacters
             return words;
         }
 
+        static string ConvertNumberToWords(int number)
+        {
+            if (number == 0)
+            {
+                return "zero";
+            }
+            else if (number < 0)
+            {
+                return "minus " + ConvertNumberToWords(Math.Abs(number));
+            }
+
+            string words = "";
+
+            // Convert the number to words in groups of three digits
+            words = ConvertHundreds(number % 1000) + words;
+            number /= 1000;
+
+            if (number > 0)
+            {
+                words = ConvertThousands(number % 1000) + words;
+                number /= 1000;
+
+                if (number > 0)
+                {
+                    words = ConvertMillions(number % 1000) + words;
+                    number /= 1000;
+
+                    if (number > 0)
+                    {
+                        words = ConvertBillions(number % 1000) + words;
+                    }
+                }
+            }
+
+            return words.Trim();
+        }
+
 
     }
 }
