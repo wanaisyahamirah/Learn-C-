@@ -40,5 +40,28 @@ namespace ConvertNumberIntoCharacters
             return words;
         }
 
+        static string ConvertTens(int number)
+        {
+            string words = "";
+
+            switch (number)
+            {
+                case 2:
+                    words = "twenty";
+                    break;
+                case 3:
+                    words = "thirty";
+                    break;
+                // add more cases for other tens digits
+                // ...
+                case 9:
+                    words = "ninety";
+                    break;
+            }
+
+            return words;
+        }
+
+
     }
 }
