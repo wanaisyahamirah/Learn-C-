@@ -8,190 +8,74 @@ namespace ConvertNumberIntoCharacters
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-
-            int number = 0;
-            bool validInput = false;
-
-            // Get user input
-            while (!validInput)
-            {
-                Console.Write("Enter a number between 0 and 999,999,999: ");
-                string input = Console.ReadLine();
-
-                if (Int32.TryParse(input, out number) && number >= 0 && number <= 999999999)
-                {
-                    validInput = true;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter a number between 0 and 999,999,999.");
-                }
-            }
-
-            // Convert number to words
-            string result = ConvertNumberToWords(number);
-
-            // Print the result
-            Console.WriteLine(result);
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            int num = 357546;
+            string numInWords = ConvertToWords(num);
+            Console.WriteLine(numInWords);
+            Console.ReadKey();
         }
 
-        static string ConvertSingleDigit(int number)
+        static string ConvertToWords(int number)
         {
+            if (number == 0)
+                return "zero";
+
+            if (number < 0)
+                return "minus " + ConvertToWords(Math.Abs(number));
+
             string words = "";
 
-            switch (number)
+            if ((number / 1000000) > 0)
             {
-                case 1:
-                    words = "one";
-                    break;
-                case 2:
-                    words = "two";
-                    break;
-                // add more cases for other single digits
-                // ...
-                case 9:
-                    words = "nine";
-                    break;
+                words += ConvertToWords(number / 1000000) + " million ";
+                number %= 1000000;
             }
 
-            return words;
-        }
-
-        static string ConvertTens(int number)
-        {
-            string words = "";
-
-            switch (number)
+            if ((number / 1000) > 0)
             {
-                case 2:
-                    words = "twenty";
-                    break;
-                case 3:
-                    words = "thirty";
-                    break;
-                // add more cases for other tens digits
-                // ...
-                case 9:
-                    words = "ninety";
-                    break;
+                words += ConvertToWords(number / 1000) + " thousand ";
+                number %= 1000;
             }
 
-            return words;
-        }
-
-        static string ConvertHundreds(int number)
-        {
-            string words = "";
-
-            if (number > 99)
+            if ((number / 100) > 0)
             {
-                words += ConvertSingleDigit(number / 100) + " hundred ";
+                words += ConvertToWords(number / 100) + " hundred ";
                 number %= 100;
             }
 
             if (number > 0)
             {
                 if (words != "")
-                {
-                    words += "and ";
-                }
+                    words += " ";
 
                 if (number < 20)
-                {
-                    words += ConvertSingleDigit(number);
-                }
+                    words += ConvertUnits(number);
                 else
                 {
                     words += ConvertTens(number / 10);
-                    if (number % 10 > 0)
-                    {
-                        words += "-" + ConvertSingleDigit(number % 10);
-                    }
+                    if ((number % 10) > 0)
+                        words += "-" + ConvertUnits(number % 10);
                 }
             }
 
             return words;
         }
 
-        static string ConvertThousands(int number)
+        static string ConvertUnits(int units)
         {
-            string words = "";
+            string[] unitsMap = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 
-            if (number > 0)
-            {
-                words = ConvertHundreds(number) + " thousand ";
-            }
-
-            return words;
+            return unitsMap[units];
         }
 
-        static string ConvertMillions(int number)
+        static string ConvertTens(int tens)
         {
-            string words = "";
+            string[] tensMap = { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
-            if (number > 0)
-            {
-                words = ConvertHundreds(number) + " million ";
-            }
-
-            return words;
+            return tensMap[tens];
         }
-
-        static string ConvertBillions(int number)
-        {
-            string words = "";
-
-            if (number > 0)
-            {
-                words = ConvertHundreds(number) + " billion ";
-            }
-
-            return words;
-        }
-
-        static string ConvertNumberToWords(int number)
-        {
-            if (number == 0)
-            {
-                return "zero";
-            }
-            else if (number < 0)
-            {
-                return "minus " + ConvertNumberToWords(Math.Abs(number));
-            }
-
-            string words = "";
-
-            // Convert the number to words in groups of three digits
-            words = ConvertHundreds(number % 1000) + words;
-            number /= 1000;
-
-            if (number > 0)
-            {
-                words = ConvertThousands(number % 1000) + words;
-                number /= 1000;
-
-                if (number > 0)
-                {
-                    words = ConvertMillions(number % 1000) + words;
-                    number /= 1000;
-
-                    if (number > 0)
-                    {
-                        words = ConvertBillions(number % 1000) + words;
-                    }
-                }
-            }
-
-            return words.Trim();
-        }
-
 
     }
 }
