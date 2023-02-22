@@ -62,6 +62,40 @@ namespace ConvertNumberIntoCharacters
             return words;
         }
 
+        static string ConvertHundreds(int number)
+        {
+            string words = "";
+
+            if (number > 99)
+            {
+                words += ConvertSingleDigit(number / 100) + " hundred ";
+                number %= 100;
+            }
+
+            if (number > 0)
+            {
+                if (words != "")
+                {
+                    words += "and ";
+                }
+
+                if (number < 20)
+                {
+                    words += ConvertSingleDigit(number);
+                }
+                else
+                {
+                    words += ConvertTens(number / 10);
+                    if (number % 10 > 0)
+                    {
+                        words += "-" + ConvertSingleDigit(number % 10);
+                    }
+                }
+            }
+
+            return words;
+        }
+
 
     }
 }
