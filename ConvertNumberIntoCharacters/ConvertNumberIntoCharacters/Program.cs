@@ -10,10 +10,16 @@ namespace ConvertNumberIntoCharacters
     {
         public static void Main()
         {
-            int num = 357546;
+            int num = GetUserInput();
             string numInWords = ConvertToWords(num);
             Console.WriteLine(numInWords);
             Console.ReadKey();
+        }
+
+        static int GetUserInput()
+        {
+            Console.Write("Enter number of rows: ");
+            return Convert.ToInt32(Console.ReadLine());
         }
 
         static string ConvertToWords(int number)
