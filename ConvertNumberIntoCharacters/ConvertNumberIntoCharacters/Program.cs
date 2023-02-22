@@ -12,10 +12,25 @@ namespace ConvertNumberIntoCharacters
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            
+
+            int number = 0;
+            bool validInput = false;
+
             // Get user input
-            Console.Write("Enter a number between 0 and 999,999,999: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            while (!validInput)
+            {
+                Console.Write("Enter a number between 0 and 999,999,999: ");
+                string input = Console.ReadLine();
+
+                if (Int32.TryParse(input, out number) && number >= 0 && number <= 999999999)
+                {
+                    validInput = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a number between 0 and 999,999,999.");
+                }
+            }
 
             // Convert number to words
             string result = ConvertNumberToWords(number);
