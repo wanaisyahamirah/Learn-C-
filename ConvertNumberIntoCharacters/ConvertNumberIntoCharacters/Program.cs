@@ -12,8 +12,16 @@ namespace ConvertNumberIntoCharacters
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            
+            // Get user input
+            Console.Write("Enter a number between 0 and 999,999,999: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            // Convert number to words
+            string result = ConvertNumberToWords(number);
+
+            // Print the result
+            Console.WriteLine(result);
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
