@@ -96,7 +96,7 @@ namespace DatabaseBackupScheduler
             }
         }
 
-        private   void btnBackup_Click(object sender, EventArgs e)
+        private void btnBackup_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
 

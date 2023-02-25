@@ -72,10 +72,9 @@ namespace DatabaseBackupScheduler
         public int ExecuteNonQuery(String sql, SqlConnection sqlcn)
         {
             try
-            {
-               
-                   SqlCommand cmd = new SqlCommand(sql, sqlcn);
-                   return  cmd.ExecuteNonQuery();
+            {               
+                SqlCommand cmd = new SqlCommand(sql, sqlcn);
+                return  cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -95,7 +94,6 @@ namespace DatabaseBackupScheduler
         {
             try
             {
-
                 SqlCommand cmd = new SqlCommand(sql, sqlcn);
                 return cmd.ExecuteReader();
             }
@@ -156,6 +154,7 @@ namespace DatabaseBackupScheduler
             }
             catch (Exception ex)
             {
+
             }
         }
 
