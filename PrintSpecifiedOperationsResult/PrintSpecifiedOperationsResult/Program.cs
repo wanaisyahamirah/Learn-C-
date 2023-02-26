@@ -63,7 +63,7 @@ namespace PrintSpecifiedOperationsResult
 
         static int GetUserInput()
         {
-            Console.Write("Enter number of rows: ");
+            Console.Write("Enter any number: ");
             return Convert.ToInt32(Console.ReadLine());
         }
 
