@@ -43,5 +43,11 @@ namespace PrintSpecifiedOperationsResult
             return num1 % num2;
         }
 
+        static int GetUserInput()
+        {
+            Console.Write("Enter number of rows: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
     }
 }
