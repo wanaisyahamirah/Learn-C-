@@ -67,5 +67,10 @@ namespace PrintSpecifiedOperationsResult
             return Convert.ToInt32(Console.ReadLine());
         }
 
+        /* 
+         *  Program completed, can improvise by allowing users
+         *  to choose which operations to execute
+         */
+
     }
 }
