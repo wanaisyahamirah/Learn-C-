@@ -17,5 +17,10 @@ namespace BigToLittleEndian
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
-    }
+
+        // Method to convert a Big Endian byte array to Little Endian
+        static byte[] ConvertBigEndianToLittleEndian(byte[] bigEndianBytes)
+        {
+
+        }
 }
