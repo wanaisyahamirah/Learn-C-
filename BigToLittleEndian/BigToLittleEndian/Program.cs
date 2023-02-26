@@ -42,5 +42,14 @@ namespace BigToLittleEndian
 
             return littleEndianBytes;
         }
+
+        /*
+        This program uses the BitConverter.ToString() method to print the original and converted byte arrays in hexadecimal format.
+        The ConvertBigEndianToLittleEndian() method takes a Big Endian byte array as input and returns a new byte array containing the Little Endian representation.
+        The method reverses the order of the bytes using a for loop, and stores the result in the littleEndianBytes array.
+
+        Note that this program assumes that the input byte array is valid and contains at least one byte. 
+        You may want to add additional error handling code to handle invalid input or edge cases.
+        */
     }
 }
