@@ -16,6 +16,12 @@ namespace PrintSpecifiedOperationsResult
             int num1 = GetUserInput();
             int num2 = GetUserInput();
 
+            // Call the methods for each operation and print the result
+            Console.WriteLine("Sum: " + Add(num1, num2));
+            Console.WriteLine("Difference: " + Subtract(num1, num2));
+            Console.WriteLine("Product: " + Multiply(num1, num2));
+            Console.WriteLine("Quotient: " + Divide(num1, num2));
+            Console.WriteLine("Modulus: " + Modulus(num1, num2));
 
             Console.ReadKey();
 
