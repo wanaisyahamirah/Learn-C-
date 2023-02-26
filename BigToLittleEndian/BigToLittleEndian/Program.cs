@@ -21,6 +21,16 @@ namespace BigToLittleEndian
         // Method to convert a Big Endian byte array to Little Endian
         static byte[] ConvertBigEndianToLittleEndian(byte[] bigEndianBytes)
         {
+            // Create a new byte array to hold the Little Endian bytes
+            byte[] littleEndianBytes = new byte[bigEndianBytes.Length];
 
+            // Reverse the order of the bytes
+            for (int i = 0; i < bigEndianBytes.Length; i++)
+            {
+                littleEndianBytes[i] = bigEndianBytes[bigEndianBytes.Length - 1 - i];
+            }
+
+            return littleEndianBytes;
         }
+    }
 }
