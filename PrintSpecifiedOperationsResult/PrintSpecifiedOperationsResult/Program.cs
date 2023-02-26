@@ -17,5 +17,11 @@ namespace PrintSpecifiedOperationsResult
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static int Add(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+
     }
 }
