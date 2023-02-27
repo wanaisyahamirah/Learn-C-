@@ -17,5 +17,8 @@ namespace AverageNumber
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
-    }
+
+        static double CalculateAverage(double num1, double num2, double num3, double num4)
+        {
+        }
 }
