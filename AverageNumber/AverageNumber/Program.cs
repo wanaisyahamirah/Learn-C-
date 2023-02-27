@@ -20,8 +20,12 @@ namespace AverageNumber
 
         static double CalculateAverage(int[] numbers)
         {
-            double sum = num1 + num2 + num3 + num4;
-            double average = sum / 4;
+            int sum = 0;
+            foreach (int number in numbers)
+            {
+                sum += number;
+            }
+            double average = (double)sum / numbers.Length;
             return average;
         }
 
