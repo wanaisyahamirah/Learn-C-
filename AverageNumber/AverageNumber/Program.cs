@@ -24,5 +24,10 @@ namespace AverageNumber
             double average = sum / 4;
             return average;
         }
+
+        static int GetIntegerUserInput()
+        {
+            
+        }
     }
 }
