@@ -27,7 +27,13 @@ namespace AverageNumber
 
         static int[] GetIntegerUserInput()
         {
-            
+            int[] numbers = new int[4];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write("Enter number " + (i + 1) + ": ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            return numbers;
         }
     }
 }
