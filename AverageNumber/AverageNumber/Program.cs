@@ -25,7 +25,7 @@ namespace AverageNumber
             return average;
         }
 
-        static int GetIntegerUserInput()
+        static int[] GetIntegerUserInput()
         {
             
         }
