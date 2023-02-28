@@ -20,5 +20,14 @@ namespace ModifyXYZ
 
         static void GetNumbers(out int x, out int y, out int z)
         {
+            Console.Write("Enter the first number: ");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the second number: ");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the third number: ");
+            z = Convert.ToInt32(Console.ReadLine());
+        }
         }
 }
