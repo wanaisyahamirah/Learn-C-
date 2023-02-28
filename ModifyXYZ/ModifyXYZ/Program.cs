@@ -35,4 +35,11 @@ namespace ModifyXYZ
             int result = (x + y) * z;
             return result;
         }
+
+        static int AddAndMultiply(int x, int y, int z)
+        {
+            int result = (x * y) + (y * z);
+            return result;
+        }
+    }
 }
