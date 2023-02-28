@@ -28,13 +28,13 @@ namespace ModifyXYZ
 
         static void GetNumbers(out int x, out int y, out int z)
         {
-            Console.Write("Enter the first number: ");
+            Console.Write("Number for x: ");
             x = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter the second number: ");
+            Console.Write("Number for y: ");
             y = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter the third number: ");
+            Console.Write("Number for z: ");
             z = Convert.ToInt32(Console.ReadLine());
         }
 
