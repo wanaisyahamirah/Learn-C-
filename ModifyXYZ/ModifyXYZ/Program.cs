@@ -32,6 +32,7 @@ namespace ModifyXYZ
 
         static int MultiplyAndAdd(int x, int y, int z)
         {
-
+            int result = (x + y) * z;
+            return result;
         }
 }
