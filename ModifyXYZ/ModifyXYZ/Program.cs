@@ -29,5 +29,9 @@ namespace ModifyXYZ
             Console.Write("Enter the third number: ");
             z = Convert.ToInt32(Console.ReadLine());
         }
+
+        static int MultiplyAndAdd(int x, int y, int z)
+        {
+
         }
 }
