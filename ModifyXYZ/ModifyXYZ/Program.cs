@@ -44,7 +44,8 @@ namespace ModifyXYZ
 
         static void PrintResults(int result1, int result2)
         {
-
+            Console.WriteLine("Result of (x + y) * z: " + result1);
+            Console.WriteLine("Result of x * y + y * z: " + result2);
         }
     }
 }
