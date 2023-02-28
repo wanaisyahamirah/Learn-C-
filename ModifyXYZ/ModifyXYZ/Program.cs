@@ -12,7 +12,15 @@ namespace ModifyXYZ
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            
+            int x, y, z;
+            GetNumbers(out x, out y, out z);
+
+            int result1 = MultiplyAndAdd(x, y, z);
+            int result2 = AddAndMultiply(x, y, z);
+
+            PrintResults(result1, result2);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
