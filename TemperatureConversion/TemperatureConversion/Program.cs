@@ -40,6 +40,11 @@ namespace TemperatureConversion
             return fahrenheit;
         }
 
+        static void PrintResult(double kelvin, double farenheit)
+        {
+
+        }
+
 
     }
 }
