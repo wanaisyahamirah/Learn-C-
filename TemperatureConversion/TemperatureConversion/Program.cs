@@ -20,7 +20,9 @@ namespace TemperatureConversion
 
         static double ConvertToKelvin(double celsius)
         {
-
+            // Convert Celsius to Kelvin using the formula K = C + 273.15
+            double kelvin = celsius + 273.15;
+            return kelvin;
         }
 
 
