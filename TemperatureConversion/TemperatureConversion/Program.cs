@@ -20,7 +20,10 @@ namespace TemperatureConversion
 
         static double GetTemperatureInCelcius()
         {
-
+            // Get Celsius temperature from user
+            Console.Write("Enter temperature in Celsius: ");
+            double celsius = Convert.ToDouble(Console.ReadLine());
+            return celsius;
         }
 
         static double ConvertToKelvin(double celsius)
