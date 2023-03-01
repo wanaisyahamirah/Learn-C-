@@ -25,6 +25,11 @@ namespace TemperatureConversion
             return kelvin;
         }
 
+        static double ConvertToFahrenheit(double celsius)
+        {
+
+        }
+
 
     }
 }
