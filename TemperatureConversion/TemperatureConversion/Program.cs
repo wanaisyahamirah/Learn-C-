@@ -27,7 +27,9 @@ namespace TemperatureConversion
 
         static double ConvertToFahrenheit(double celsius)
         {
-
+            // Convert Celsius to Fahrenheit using the formula F = (C * 1.8) + 32
+            double fahrenheit = (celsius * 1.8) + 32;
+            return fahrenheit;
         }
 
 
