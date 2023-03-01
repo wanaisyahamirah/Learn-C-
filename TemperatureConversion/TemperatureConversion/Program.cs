@@ -40,9 +40,11 @@ namespace TemperatureConversion
             return fahrenheit;
         }
 
-        static void PrintResult(double kelvin, double farenheit)
+        static void PrintResult(double celsius, double kelvin, double farenheit)
         {
-
+            // Print results
+            Console.WriteLine("{0} Celsius = {1} Kelvin", celsius, kelvin);
+            Console.WriteLine("{0} Celsius = {1} Fahrenheit", celsius, farenheit);
         }
 
 
