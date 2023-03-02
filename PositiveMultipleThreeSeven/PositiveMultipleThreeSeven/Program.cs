@@ -20,7 +20,9 @@ namespace PositiveMultipleThreeSeven
 
         static int GetPositiveNumber()
         {
-
+            Console.Write("Enter a positive number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            return number;
         }
     }
 }
