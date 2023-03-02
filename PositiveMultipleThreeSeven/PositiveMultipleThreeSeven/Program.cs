@@ -27,7 +27,7 @@ namespace PositiveMultipleThreeSeven
 
         static bool IsMultipleOf3(int number)
         {
-
+            return number % 3 == 0;
         }
     }
 }
