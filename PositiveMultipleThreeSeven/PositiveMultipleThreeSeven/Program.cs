@@ -24,5 +24,10 @@ namespace PositiveMultipleThreeSeven
             int number = Convert.ToInt32(Console.ReadLine());
             return number;
         }
+
+        static bool IsMultipleOf3(int number)
+        {
+
+        }
     }
 }
