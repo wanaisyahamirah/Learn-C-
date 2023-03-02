@@ -30,8 +30,27 @@ namespace PositiveMultipleThreeSeven
 
         static int GetPositiveNumber()
         {
-            Console.Write("Enter a positive number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number = 0;
+            bool validInput = false;
+            while (!validInput)
+            {
+                Console.Write("Enter a positive number: ");
+                if (int.TryParse(Console.ReadLine(), out number))
+                {
+                    if (number > 0)
+                    {
+                        validInput = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Number must be positive. Please try again.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter an integer.");
+                }
+            }
             return number;
         }
 
