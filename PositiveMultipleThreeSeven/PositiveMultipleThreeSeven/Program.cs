@@ -34,5 +34,21 @@ namespace PositiveMultipleThreeSeven
         {
             return number % 7 == 0;
         }
+
+        static void PrintResult(int number, bool isMultipleOf3, bool isMultipleOf7)
+        {
+            if (isMultipleOf3)
+            {
+                Console.WriteLine("{0} is a multiple of 3.", number);
+            }
+            else if (isMultipleOf7)
+            {
+                Console.WriteLine("{0} is a multiple of 7.", number);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a multiple of 3 or 7.", number);
+            }
+        }
     }
 }
