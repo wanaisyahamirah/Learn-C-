@@ -12,7 +12,17 @@ namespace PositiveMultipleThreeSeven
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            
+            // Get user input
+            Console.Write("Enter a positive number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            // Check if the number is a multiple of 3 or 7
+            bool isMultipleOf3 = IsMultipleOf3(number);
+            bool isMultipleOf7 = IsMultipleOf7(number);
+
+            // Print the result
+            PrintResult(number, isMultipleOf3, isMultipleOf7);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
