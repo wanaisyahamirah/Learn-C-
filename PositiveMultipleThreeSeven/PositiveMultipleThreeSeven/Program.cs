@@ -14,8 +14,7 @@ namespace PositiveMultipleThreeSeven
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             
             // Get user input
-            Console.Write("Enter a positive number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number = GetPositiveNumber();
 
             // Check if the number is a multiple of 3 or 7
             bool isMultipleOf3 = IsMultipleOf3(number);
@@ -43,6 +42,7 @@ namespace PositiveMultipleThreeSeven
                     }
                     else
                     {
+                        Console.WriteLine("{0} is not a multiple of 3 or 7.", number);
                         Console.WriteLine("Number must be positive. Please try again.");
                     }
                 }
