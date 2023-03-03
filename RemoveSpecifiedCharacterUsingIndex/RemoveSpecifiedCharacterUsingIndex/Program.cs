@@ -20,7 +20,17 @@ namespace RemoveSpecifiedCharacterUsingIndex
 
         static string GetUserInput(string message)
         {
+            Console.Write(message);
+            string input = Console.ReadLine();
 
+            while (string.IsNullOrEmpty(input))
+            {
+                Console.WriteLine("Input cannot be empty!");
+                Console.Write(message);
+                input = Console.ReadLine();
+            }
+
+            return input;
         }
 
 
