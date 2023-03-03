@@ -60,7 +60,7 @@ namespace RemoveSpecifiedCharacterUsingIndex
 
         static void PrintResult(string output)
         {
-
+            Console.WriteLine("Output string: {0}", output);
         }
 
     }
