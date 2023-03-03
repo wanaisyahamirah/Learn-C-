@@ -33,6 +33,11 @@ namespace RemoveSpecifiedCharacterUsingIndex
             return input;
         }
 
+        static int GetPositiveNumber(string message)
+        {
+
+        }
+
 
     }
 }
