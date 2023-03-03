@@ -12,7 +12,17 @@ namespace RemoveSpecifiedCharacterUsingIndex
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            
+            // Get user input
+            string inputString = GetUserInput("Enter a string: ");
+            int charIndex = GetPositiveNumber("Enter the index of the character to remove: ");
+
+            // Remove character by index
+            string outputString = RemoveCharByIndex(inputString, charIndex);
+
+            // Print the result
+            PrintResult(outputString);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
