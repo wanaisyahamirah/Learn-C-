@@ -57,5 +57,11 @@ namespace RemoveSpecifiedCharacterUsingIndex
 
             return input.Remove(index, 1);
         }
+
+        static void PrintResult(string output)
+        {
+
+        }
+
     }
 }
