@@ -47,6 +47,9 @@ namespace RemoveSpecifiedCharacterUsingIndex
             return number;
         }
 
+        static string RemoveCharByIndex(string input, int index)
+        {
 
+        }
     }
 }
