@@ -35,7 +35,16 @@ namespace RemoveSpecifiedCharacterUsingIndex
 
         static int GetPositiveNumber(string message)
         {
+            Console.Write(message);
+            int number;
 
+            while (!int.TryParse(Console.ReadLine(), out number) || number <= 0)
+            {
+                Console.WriteLine("Input must be a positive integer!");
+                Console.Write(message);
+            }
+
+            return number;
         }
 
 
