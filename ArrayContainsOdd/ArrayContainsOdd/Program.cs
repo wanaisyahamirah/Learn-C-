@@ -12,7 +12,16 @@ namespace ArrayContainsOdd
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            
+            // Get user input
+            int[] array = GetArrayInput();
+
+            // Check if the array contains an odd number
+            bool containsOddNumber = ContainsOddNumber(array);
+
+            // Print the result
+            PrintResult(containsOddNumber);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
