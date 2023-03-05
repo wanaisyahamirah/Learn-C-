@@ -27,7 +27,8 @@ namespace ConvertStringToLowercase
 
         static string ConvertToLowercase(string input)
         {
-
+            string lowercase = input.ToLower();
+            return lowercase;
         }
     }
 }
