@@ -20,7 +20,7 @@ namespace ArrayContainsOdd
             bool containsOddNumber = ContainsOddNumber(array);
 
             // Print the result
-            PrintResult(containsOddNumber);
+            PrintResult(containsOddNumber, array);
 
             Console.ReadKey();
 
@@ -55,11 +55,18 @@ namespace ArrayContainsOdd
             return false;
         }
 
-        static void PrintResult(bool containsOddNumber)
+        static void PrintResult(bool containsOddNumber, int[] array)
         {
             if (containsOddNumber)
             {
-                Console.WriteLine("The array contains an odd number.");
+                Console.WriteLine("The array contains the following odd numbers:");
+                foreach (int num in array)
+                {
+                    if (num % 2 != 0)
+                    {
+                        Console.WriteLine(num);
+                    }
+                }
             }
             else
             {
