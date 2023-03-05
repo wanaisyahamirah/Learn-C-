@@ -48,7 +48,14 @@ namespace ArrayContainsOdd
 
         static void PrintResult(bool containsOddNumber)
         {
-
+            if (containsOddNumber)
+            {
+                Console.WriteLine("The array contains an odd number.");
+            }
+            else
+            {
+                Console.WriteLine("The array does not contain an odd number.");
+            }
         }
     }
 }
