@@ -20,7 +20,17 @@ namespace ArrayContainsOdd
 
         static int[] GetArrayInput()
         {
+            onsole.Write("Enter the number of elements in the array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
 
+            int[] array = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Enter element {0}: ", i + 1);
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            return array;
         }
     }
 }
