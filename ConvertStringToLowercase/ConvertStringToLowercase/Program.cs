@@ -30,5 +30,10 @@ namespace ConvertStringToLowercase
             string lowercase = input.ToLower();
             return lowercase;
         }
+
+        static void PrintResult(string lowercase)
+        {
+
+        }
     }
 }
