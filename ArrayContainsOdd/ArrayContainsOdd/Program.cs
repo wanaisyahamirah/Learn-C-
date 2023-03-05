@@ -45,5 +45,10 @@ namespace ArrayContainsOdd
 
             return false;
         }
+
+        static void PrintResult(bool containsOddNumber)
+        {
+
+        }
     }
 }
