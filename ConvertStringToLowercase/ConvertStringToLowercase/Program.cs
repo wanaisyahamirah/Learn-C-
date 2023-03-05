@@ -24,5 +24,10 @@ namespace ConvertStringToLowercase
             string input = Console.ReadLine();
             return input;
         }
+
+        static string ConvertToLowercase(string input)
+        {
+
+        }
     }
 }
