@@ -20,7 +20,9 @@ namespace ConvertStringToLowercase
 
         static String GetInputString()
         {
-
+            Console.Write("Enter a string: ");
+            string input = Console.ReadLine();
+            return input;
         }
     }
 }
