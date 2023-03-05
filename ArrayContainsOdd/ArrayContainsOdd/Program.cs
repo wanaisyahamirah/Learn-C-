@@ -20,7 +20,7 @@ namespace ArrayContainsOdd
 
         static int[] GetArrayInput()
         {
-            onsole.Write("Enter the number of elements in the array: ");
+            Console.Write("Enter the number of elements in the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] array = new int[n];
@@ -31,6 +31,11 @@ namespace ArrayContainsOdd
             }
 
             return array;
+        }
+
+        static bool ContainsOddNumber(int[] array)
+        {
+
         }
     }
 }
