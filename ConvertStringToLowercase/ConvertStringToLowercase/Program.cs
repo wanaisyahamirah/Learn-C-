@@ -33,7 +33,7 @@ namespace ConvertStringToLowercase
 
         static void PrintResult(string lowercase)
         {
-
+            Console.WriteLine("Result: {0}", lowercase);
         }
     }
 }
