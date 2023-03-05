@@ -35,7 +35,15 @@ namespace ArrayContainsOdd
 
         static bool ContainsOddNumber(int[] array)
         {
+            foreach (int num in array)
+            {
+                if (num % 2 != 0)
+                {
+                    return true;
+                }
+            }
 
+            return false;
         }
     }
 }
