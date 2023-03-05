@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertStringToLowercase", "ConvertStringToLowercase\ConvertStringToLowercase.csproj", "{0994A516-D470-47D7-B019-8BD62A728645}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0994A516-D470-47D7-B019-8BD62A728645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0994A516-D470-47D7-B019-8BD62A728645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0994A516-D470-47D7-B019-8BD62A728645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0994A516-D470-47D7-B019-8BD62A728645}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5C86882-309E-4659-8EB4-A2964835B443}
+	EndGlobalSection
+EndGlobal
