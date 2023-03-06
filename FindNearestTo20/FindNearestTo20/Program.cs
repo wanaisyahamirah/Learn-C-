@@ -12,7 +12,17 @@ namespace FindNearestTo20
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            
+            // Get user input
+            int num1 = GetInput();
+            int num2 = GetInput();
+
+            // Check nearest value to 20
+            int result = CheckNearestValue(num1, num2);
+
+            // Print result
+            Console.WriteLine($"The nearest value to 20 is {result}");
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
