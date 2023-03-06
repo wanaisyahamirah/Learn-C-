@@ -12,10 +12,10 @@ namespace FindNearestTo20
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            
+
             // Get user input
-            int num1 = GetInput();
-            int num2 = GetInput();
+            int num1 = GetInput("Enter the first integer: ");
+            int num2 = GetInput("Enter the second integer: ");
 
             // Check nearest value to 20
             int result = CheckNearestValue(num1, num2);
