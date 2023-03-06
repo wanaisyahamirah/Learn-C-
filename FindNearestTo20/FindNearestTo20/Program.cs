@@ -33,6 +33,26 @@ namespace FindNearestTo20
                 Console.Write("Invalid input. Enter an integer: ");
             }
             return num;
-        } 
+        }
+
+        static int CheckNearestValue(int num1, int num2)
+        {
+            if (num1 == num2)
+            {
+                return 0;
+            }
+
+            int diff1 = Math.Abs(num1 - 20);
+            int diff2 = Math.Abs(num2 - 20);
+
+            if (diff1 < diff2)
+            {
+                return num1;
+            }
+            else
+            {
+                return num2;
+            }
+        }
     }
 }
