@@ -18,9 +18,21 @@ namespace FindNearestTo20
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
+        static int GetInput()
+        {
+            Console.Write("Enter the integer: ");
+            int num = GetValidInput();
+            return num;
+        }
+
         static int GetValidInput()
         {
-
+            int num;
+            while (!int.TryParse(Console.ReadLine(), out num))
+            {
+                Console.Write("Invalid input. Enter an integer: ");
+            }
+            return num;
         } 
     }
 }
