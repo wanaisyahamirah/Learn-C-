@@ -15,7 +15,7 @@ namespace IndexLowercaseLetters
 
             String inputString = GetStringInput();
 
-            int[] indices = GetLowerCaseIndices(str);
+            int[] indices = GetLowerCaseIndices(inputString);
 
             Console.ReadKey();
 
