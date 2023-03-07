@@ -48,5 +48,10 @@ namespace IndexLowercaseLetters
 
             return trimmedIndices;
         }
+
+        static void PrintResult(int[] indices)
+        {
+            
+        }
     }
 }
