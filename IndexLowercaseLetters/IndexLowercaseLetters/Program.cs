@@ -17,6 +17,8 @@ namespace IndexLowercaseLetters
 
             int[] indices = GetLowerCaseIndices(inputString);
 
+            PrintResult(indices);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
