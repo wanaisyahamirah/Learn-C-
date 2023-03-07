@@ -17,5 +17,12 @@ namespace IndexLowercaseLetters
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static String GetStringInput()
+        {
+            Console.Write("Enter a string: ");
+            string str = Console.ReadLine();
+            return str;
+        }
     }
 }
