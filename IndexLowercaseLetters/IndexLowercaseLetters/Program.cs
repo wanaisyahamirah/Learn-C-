@@ -25,5 +25,10 @@ namespace IndexLowercaseLetters
             string str = Console.ReadLine();
             return str;
         }
+
+        static int[] GetLowerCaseIndices(string str)
+        {
+
+        }
     }
 }
