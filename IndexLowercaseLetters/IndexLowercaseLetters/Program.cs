@@ -28,7 +28,22 @@ namespace IndexLowercaseLetters
 
         static int[] GetLowerCaseIndices(string str)
         {
+            int[] indices = new int[str.Length];
+            int count = 0;
 
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (char.IsLower(str[i]))
+                {
+                    indices[count] = i;
+                    count++;
+                }
+            }
+
+            int[] trimmedIndices = new int[count];
+            Array.Copy(indices, trimmedIndices, count);
+
+            return trimmedIndices;
         }
     }
 }
