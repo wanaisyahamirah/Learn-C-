@@ -51,7 +51,7 @@ namespace IndexLowercaseLetters
 
         static void PrintResult(int[] indices)
         {
-            
+            Console.WriteLine($"Indices of all lower case letters of the said string: {string.Join(" ", indices)}");
         }
     }
 }
