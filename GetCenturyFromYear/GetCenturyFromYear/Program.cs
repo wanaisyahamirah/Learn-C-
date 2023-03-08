@@ -35,5 +35,10 @@ namespace GetCenturyFromYear
             return century;
         }
 
+        static void PrintResult(int year, int century)
+        {
+
+        }
+
     }
 }
