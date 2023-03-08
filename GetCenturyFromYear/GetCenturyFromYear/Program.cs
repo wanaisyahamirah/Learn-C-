@@ -17,5 +17,13 @@ namespace GetCenturyFromYear
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static int GetYear()
+        {
+            Console.Write("Enter a year: ");
+            int year = int.Parse(Console.ReadLine());
+            return year;
+        }
+
     }
 }
