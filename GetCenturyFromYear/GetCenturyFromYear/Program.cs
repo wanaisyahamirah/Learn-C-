@@ -16,7 +16,7 @@ namespace GetCenturyFromYear
             int year = GetYear();
             int century = GetCentury(year);
             string postfix = GetPostfix(century);
-            PrintResult(year, century);
+            PrintResult(year, century, postfix);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
