@@ -27,7 +27,12 @@ namespace GetCenturyFromYear
 
         static int GetCentury(int year)
         {
-
+            int century = year / 100;
+            if (year % 100 != 0)
+            {
+                century++;
+            }
+            return century;
         }
 
     }
