@@ -25,5 +25,10 @@ namespace GetCenturyFromYear
             return year;
         }
 
+        static int GetCentury(int year)
+        {
+
+        }
+
     }
 }
