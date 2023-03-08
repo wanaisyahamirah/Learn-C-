@@ -15,6 +15,7 @@ namespace GetCenturyFromYear
 
             int year = GetYear();
             int century = GetCentury(year);
+            string postfix = GetPostfix(century);
             PrintResult(year, century);
             Console.ReadKey();
 
@@ -68,9 +69,9 @@ namespace GetCenturyFromYear
             return postfix;
         }
 
-        static void PrintResult(int year, int century)
+        static void PrintResult(int year, int century, string postfix)
         {
-            Console.WriteLine("{0} belongs to the {1} century.", year, century);
+            Console.WriteLine("{0} belongs to the {1} century.", year, century, postfix);
         }
 
     }
