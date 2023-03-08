@@ -38,6 +38,11 @@ namespace GetCenturyFromYear
             return century;
         }
 
+        static string GetPostfix(int century)
+        {
+
+        }
+
         static void PrintResult(int year, int century)
         {
             Console.WriteLine("{0} belongs to the {1} century.", year, century);
