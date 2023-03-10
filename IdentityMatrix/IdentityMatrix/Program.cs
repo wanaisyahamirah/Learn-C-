@@ -12,13 +12,19 @@ namespace IdentityMatrix
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+
+            int n = GetNValue();
+
+            int[,] identityMatrix = CreateIdentityMatrix(n);
+
+            Console.WriteLine("The identity matrix of size {0} is:", n);
+            PrintMatrix(identityMatrix);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
-        public int GetNValue()
+        public static int GetNValue()
         {
             Console.Write("Enter the size of the identity matrix: ");
             int n = int.Parse(Console.ReadLine());
