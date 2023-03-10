@@ -42,7 +42,17 @@ namespace IdentityMatrix
 
         public static void PrintMatrix(int[,] matrix)
         {
+            int numRows = matrix.GetLength(0);
+            int numCols = matrix.GetLength(1);
 
+            for (int i = 0; i < numRows; i++)
+            {
+                for (int j = 0; j < numCols; j++)
+                {
+                    Console.Write("{0} ", matrix[i, j]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
