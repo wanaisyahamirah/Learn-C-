@@ -20,7 +20,24 @@ namespace IdentityMatrix
 
         public static int[,] CreateIdentityMatrix(int n)
         {
+            int[,] identityMatrix = new int[n, n];
 
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (i == j)
+                    {
+                        identityMatrix[i, j] = 1;
+                    }
+                    else
+                    {
+                        identityMatrix[i, j] = 0;
+                    }
+                }
+            }
+
+            return identityMatrix;
         }
     }
 }
