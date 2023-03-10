@@ -18,6 +18,13 @@ namespace IdentityMatrix
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
 
+        public int GetNValue()
+        {
+            Console.Write("Enter the size of the identity matrix: ");
+            int n = int.Parse(Console.ReadLine());
+            return n;
+        }
+
         public static int[,] CreateIdentityMatrix(int n)
         {
             int[,] identityMatrix = new int[n, n];
