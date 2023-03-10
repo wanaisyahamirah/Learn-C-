@@ -39,5 +39,10 @@ namespace IdentityMatrix
 
             return identityMatrix;
         }
+
+        public static void PrintMatrix(int[,] matrix)
+        {
+
+        }
     }
 }
