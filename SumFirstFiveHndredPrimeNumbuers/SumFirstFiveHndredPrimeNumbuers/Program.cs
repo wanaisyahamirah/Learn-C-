@@ -32,7 +32,19 @@ namespace SumFirstFiveHndredPrimeNumbuers
 
         static int[] GetFirst500Primes()
         {
-
+            int[] primes = new int[500];
+            int count = 0;
+            int number = 2;
+            while (count < 500)
+            {
+                if (IsPrime(number))
+                {
+                    primes[count] = number;
+                    count++;
+                }
+                number++;
+            }
+            return primes;
         }
     }
 }
