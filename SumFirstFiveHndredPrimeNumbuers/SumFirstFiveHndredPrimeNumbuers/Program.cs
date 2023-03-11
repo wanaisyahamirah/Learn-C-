@@ -29,5 +29,10 @@ namespace SumFirstFiveHndredPrimeNumbuers
             }
             return true;
         }
+
+        static int[] GetFirst500Primes()
+        {
+
+        }
     }
 }
