@@ -46,5 +46,10 @@ namespace SumFirstFiveHndredPrimeNumbuers
             }
             return primes;
         }
+
+        static long SumOfFirst500Primes()
+        {
+
+        }
     }
 }
