@@ -49,7 +49,13 @@ namespace SumFirstFiveHndredPrimeNumbuers
 
         static long SumOfFirst500Primes()
         {
-
+            int[] primes = GetFirst500Primes();
+            long sum = 0;
+            foreach (int prime in primes)
+            {
+                sum += prime;
+            }
+            return sum;
         }
     }
 }
