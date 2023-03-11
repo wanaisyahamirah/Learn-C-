@@ -58,9 +58,9 @@ namespace SumFirstFiveHndredPrimeNumbuers
             return sum;
         }
 
-        static void PrintResult()
+        static void PrintResult(long sum)
         {
-
+            Console.WriteLine($"The sum of the first 500 primes is {sum}.");
         }
     }
 }
