@@ -57,5 +57,10 @@ namespace SumFirstFiveHndredPrimeNumbuers
             }
             return sum;
         }
+
+        static void PrintResult()
+        {
+
+        }
     }
 }
