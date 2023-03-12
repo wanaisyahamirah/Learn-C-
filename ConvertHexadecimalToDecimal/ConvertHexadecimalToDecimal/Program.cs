@@ -12,7 +12,16 @@ namespace ConvertHexadecimalToDecimal
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+
+            // Get hexadecimal input from user
+            string hex = GetHex();
+
+            // Convert hexadecimal to decimal
+            int decimalValue = HexToDecimal(hex);
+
+            // Print result
+            PrintResult(hex, decimalValue);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -71,9 +80,9 @@ namespace ConvertHexadecimalToDecimal
             }
         }
 
-        static void PrintResult()
+        static void PrintResult(String hex, int decimalValue)
         {
-
+            Console.WriteLine($"Decimal value of {hex} is {decimalValue}");
         }
     }
 }
