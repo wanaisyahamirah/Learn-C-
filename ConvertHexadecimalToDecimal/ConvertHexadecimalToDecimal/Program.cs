@@ -70,5 +70,10 @@ namespace ConvertHexadecimalToDecimal
                 }
             }
         }
+
+        static void PrintResult()
+        {
+
+        }
     }
 }
