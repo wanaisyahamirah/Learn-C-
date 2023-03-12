@@ -42,7 +42,33 @@ namespace ConvertHexadecimalToDecimal
             return decimalValue;
         }
 
-
-
+        static int HexDigitToDecimal(char hexDigit)
+        {
+            if (char.IsDigit(hexDigit))
+            {
+                return int.Parse(hexDigit.ToString());
+            }
+            else
+            {
+                hexDigit = char.ToUpper(hexDigit);
+                switch (hexDigit)
+                {
+                    case 'A':
+                        return 10;
+                    case 'B':
+                        return 11;
+                    case 'C':
+                        return 12;
+                    case 'D':
+                        return 13;
+                    case 'E':
+                        return 14;
+                    case 'F':
+                        return 15;
+                    default:
+                        throw new ArgumentException($"Invalid hexadecimal digit: {hexDigit}");
+                }
+            }
+        }
     }
 }
