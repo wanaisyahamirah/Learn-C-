@@ -27,7 +27,16 @@ namespace LongestWordInString
 
         static string FindLongestWord(string input)
         {
-
+            string[] words = input.Split(' '); // Split the string into words
+            string longestWord = "";
+            foreach (string word in words)
+            {
+                if (word.Length > longestWord.Length)
+                {
+                    longestWord = word;
+                }
+            }
+            return longestWord;
         }
     }
 }
