@@ -20,7 +20,9 @@ namespace LongestWordInString
 
         static String GetInput()
         {
-
+            Console.Write("Enter a string: ");
+            string input = Console.ReadLine();
+            return input;
         }
     }
 }
