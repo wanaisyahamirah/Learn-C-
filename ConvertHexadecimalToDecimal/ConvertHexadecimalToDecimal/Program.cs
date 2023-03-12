@@ -20,7 +20,10 @@ namespace ConvertHexadecimalToDecimal
 
         static String GetHex()
         {
-
+            // Get hexadecimal input from user
+            Console.Write("Enter a hexadecimal number: ");
+            string hex = Console.ReadLine();
+            return hex;
         }
     }
 }
