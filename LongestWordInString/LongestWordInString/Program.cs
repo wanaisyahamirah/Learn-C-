@@ -38,5 +38,10 @@ namespace LongestWordInString
             }
             return longestWord;
         }
+
+        static void PrintResult(String longest)
+        {
+
+        }
     }
 }
