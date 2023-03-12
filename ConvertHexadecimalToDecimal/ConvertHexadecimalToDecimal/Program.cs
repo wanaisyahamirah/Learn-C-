@@ -25,5 +25,24 @@ namespace ConvertHexadecimalToDecimal
             string hex = Console.ReadLine();
             return hex;
         }
+
+        static int HexToDecimal(string hex)
+        {
+            int decimalValue = 0;
+
+            for (int i = 0; i < hex.Length; i++)
+            {
+                // Get the decimal value of the current hexadecimal digit
+                int digitValue = HexDigitToDecimal(hex[i]);
+
+                // Multiply the decimal value by the appropriate power of 16 and add to the running total
+                decimalValue += digitValue * (int)Math.Pow(16, hex.Length - i - 1);
+            }
+
+            return decimalValue;
+        }
+
+
+
     }
 }
