@@ -24,5 +24,10 @@ namespace LongestWordInString
             string input = Console.ReadLine();
             return input;
         }
+
+        static string FindLongestWord(string input)
+        {
+
+        }
     }
 }
