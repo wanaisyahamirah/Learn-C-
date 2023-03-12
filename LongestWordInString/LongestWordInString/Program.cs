@@ -41,7 +41,7 @@ namespace LongestWordInString
 
         static void PrintResult(String longest)
         {
-
+            Console.WriteLine($"The longest word in the string is '{longest}'.");
         }
     }
 }
