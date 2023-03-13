@@ -27,5 +27,9 @@ namespace RemoveVowelsInString
         }
 
         static string RemoveVowels(string input)
+        {
+
+        }
+
     }
 }
