@@ -20,7 +20,9 @@ namespace RemoveVowelsInString
 
         static String GetInput()
         {
-
+            // Get user input
+            Console.Write("Enter a string: ");
+            string input = Console.ReadLine();
         }
     }
 }
