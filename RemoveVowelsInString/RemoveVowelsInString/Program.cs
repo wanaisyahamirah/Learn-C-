@@ -43,7 +43,7 @@ namespace RemoveVowelsInString
         static void PrintResult(String removedVowels)
         {
             // Print result
-            Console.WriteLine($"Result: {result}");
+            Console.WriteLine($"Result: {removedVowels}");
         }
 
     }
