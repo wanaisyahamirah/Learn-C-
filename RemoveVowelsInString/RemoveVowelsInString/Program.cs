@@ -40,5 +40,10 @@ namespace RemoveVowelsInString
             return result;
         }
 
+        static void PrintResult(String removedVowels)
+        {
+
+        }
+
     }
 }
