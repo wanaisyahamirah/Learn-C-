@@ -35,9 +35,9 @@ namespace GenerateNewStringOfOthers
             return result;
         }
 
-
-
-
-
+        static void PrintResult(string result)
+        {
+            Console.WriteLine($"The new string of every other character is: {result}");
+        }
     }
 }
