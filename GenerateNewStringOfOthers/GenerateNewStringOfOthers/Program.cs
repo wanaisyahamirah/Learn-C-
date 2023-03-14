@@ -24,5 +24,20 @@ namespace GenerateNewStringOfOthers
             string input = Console.ReadLine();
             return input;
         }
+
+        static string GetEveryOtherCharacter(string input)
+        {
+            string result = "";
+            for (int i = 0; i < input.Length; i += 2)
+            {
+                result += input[i];
+            }
+            return result;
+        }
+
+
+
+
+
     }
 }
