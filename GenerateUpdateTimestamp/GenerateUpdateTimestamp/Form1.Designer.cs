@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.generatedTimestamp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.generatedTimestamp);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -74,13 +74,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Click the button to generate:";
             // 
-            // textBox1
+            // generatedTimestamp
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Location = new System.Drawing.Point(6, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(329, 20);
-            this.textBox1.TabIndex = 2;
+            this.generatedTimestamp.BackColor = System.Drawing.Color.LightGray;
+            this.generatedTimestamp.Location = new System.Drawing.Point(6, 113);
+            this.generatedTimestamp.Name = "generatedTimestamp";
+            this.generatedTimestamp.Size = new System.Drawing.Size(329, 20);
+            this.generatedTimestamp.TabIndex = 2;
             // 
             // label2
             // 
@@ -112,7 +112,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox generatedTimestamp;
     }
 }
 
