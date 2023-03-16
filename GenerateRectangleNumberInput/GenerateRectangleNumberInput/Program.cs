@@ -45,7 +45,7 @@ namespace GenerateRectangleNumberInput
 
         static void PrintResult(string rectangle)
         {
-
+            Console.WriteLine(rectangle);
         }
     }
 }
