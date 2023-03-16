@@ -28,5 +28,11 @@ namespace GenerateUpdateTimestamp
             // Display the generated value in the text box
             generatedTimestamp.Text = generatedValue;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Copy the generated value to the clipboard
+            Clipboard.SetText(generatedTimestamp.Text);
+        }
     }
 }
