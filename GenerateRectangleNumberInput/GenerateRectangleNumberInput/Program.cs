@@ -20,7 +20,13 @@ namespace GenerateRectangleNumberInput
 
         static int GetInput()
         {
-
+            Console.Write("Enter a single digit number: ");
+            int num;
+            while (!int.TryParse(Console.ReadLine(), out num) || num < 0 || num > 9)
+            {
+                Console.Write("Invalid input. Enter a single digit number: ");
+            }
+            return num;
         }
     }
 }
