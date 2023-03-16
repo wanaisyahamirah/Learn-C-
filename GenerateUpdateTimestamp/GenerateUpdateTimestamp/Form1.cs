@@ -26,7 +26,6 @@ namespace GenerateUpdateTimestamp
             string generatedValue = datePrefix + "00000001870";
 
             // Display the generated value in the text box
-            // Display the generated value in the text box
             generatedTimestamp.Text = generatedValue;
         }
     }
