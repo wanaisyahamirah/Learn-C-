@@ -28,5 +28,10 @@ namespace GenerateRectangleNumberInput
             }
             return num;
         }
+
+        static string CreateRectangle(int num)
+        {
+
+        }
     }
 }
