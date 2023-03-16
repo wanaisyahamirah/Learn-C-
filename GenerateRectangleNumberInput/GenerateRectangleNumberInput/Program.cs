@@ -42,5 +42,10 @@ namespace GenerateRectangleNumberInput
             }
             return rectangle;
         }
+
+        static void PrintResult(string rectangle)
+        {
+
+        }
     }
 }
