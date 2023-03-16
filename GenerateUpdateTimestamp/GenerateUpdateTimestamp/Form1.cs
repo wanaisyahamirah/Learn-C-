@@ -16,5 +16,13 @@ namespace GenerateUpdateTimestamp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Get the current date and format it as YYYYMMDD
+            string datePrefix = DateTime.Now.ToString("yyyyMMdd");
+
+            
+        }
     }
 }
