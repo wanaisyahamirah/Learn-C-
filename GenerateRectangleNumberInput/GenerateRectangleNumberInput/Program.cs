@@ -31,7 +31,16 @@ namespace GenerateRectangleNumberInput
 
         static string CreateRectangle(int num)
         {
-
+            string rectangle = "";
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    rectangle += num.ToString();
+                }
+                rectangle += "\n";
+            }
+            return rectangle;
         }
     }
 }
