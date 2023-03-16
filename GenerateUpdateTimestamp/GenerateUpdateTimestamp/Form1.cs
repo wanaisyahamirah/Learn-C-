@@ -22,7 +22,8 @@ namespace GenerateUpdateTimestamp
             // Get the current date and format it as YYYYMMDD
             string datePrefix = DateTime.Now.ToString("yyyyMMdd");
 
-            
+            // Combine the date prefix with the constant suffix
+            string generatedValue = datePrefix + "00000001870";
         }
     }
 }
