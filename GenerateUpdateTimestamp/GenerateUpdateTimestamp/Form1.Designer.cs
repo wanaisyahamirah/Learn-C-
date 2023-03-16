@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.generatedTimestamp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.generatedTimestamp);
             this.groupBox1.Controls.Add(this.label1);
@@ -60,7 +62,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(341, 153);
+            this.groupBox1.Size = new System.Drawing.Size(341, 199);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Timestap Generator";
@@ -91,12 +93,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "The value of UPD_TMS is:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Click the button to copy:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(364, 177);
+            this.ClientSize = new System.Drawing.Size(364, 264);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Timestamp Generator";
@@ -113,6 +124,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox generatedTimestamp;
+        private System.Windows.Forms.Label label3;
     }
 }
 
