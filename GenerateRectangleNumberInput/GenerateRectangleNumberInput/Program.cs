@@ -12,7 +12,16 @@ namespace GenerateRectangleNumberInput
         {
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+
+            // Get user input
+            int num = GetInput();
+
+            // Create rectangle string
+            string rectangle = CreateRectangle(num);
+
+            // Print result
+            PrintResult(rectangle);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -47,5 +56,7 @@ namespace GenerateRectangleNumberInput
         {
             Console.WriteLine(rectangle);
         }
+
+        //Program can be future imporvised by letting user decides the columns wide and tall
     }
 }
