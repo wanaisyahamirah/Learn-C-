@@ -37,6 +37,27 @@ namespace LargestAdjacentProduct
             return target;
         }
 
+        static int[] FindLargestAdjacentProduct(int[] nums, int target)
+        {
+            int[] result = null;
+            int largestProduct = int.MinValue;
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                int product = nums[i] * nums[i + 1];
+                if (product == target)
+                {
+                    result = new int[] { nums[i], nums[i + 1] };
+                    break;
+                }
+                else if (product > largestProduct)
+                {
+                    largestProduct = product;
+                    result = new int[] { nums[i], nums[i + 1] };
+                }
+            }
+            return result;
+        }
+
 
     }
 }
