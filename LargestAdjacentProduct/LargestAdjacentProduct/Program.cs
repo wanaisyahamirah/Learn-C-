@@ -17,5 +17,17 @@ namespace LargestAdjacentProduct
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static int[] GetInput()
+        {
+            Console.Write("Enter the elements of the array (comma-separated): ");
+            string[] input = Console.ReadLine().Split(',');
+            int[] nums = new int[input.Length];
+            for (int i = 0; i < input.Length; i++)
+            {
+                nums[i] = int.Parse(input[i]);
+            }
+            return nums;
+        }
     }
 }
