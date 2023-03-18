@@ -58,6 +58,18 @@ namespace LargestAdjacentProduct
             return result;
         }
 
+        static void PrintResult(int[] result)
+        {
+            if (result == null)
+            {
+                Console.WriteLine("No pair of adjacent elements in the array has a product equal to the target value.");
+            }
+            else
+            {
+                Console.WriteLine($"The pair of adjacent elements ({result[0]}, {result[1]}) has the largest product ({target}).");
+            }
+        }
+
 
     }
 }
