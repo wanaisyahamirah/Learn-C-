@@ -17,7 +17,7 @@ namespace LargestAdjacentProduct
             int target = GetTarget();
 
             int[] result = FindLargestAdjacentProduct(nums, target);
-            PrintResult(result);
+            PrintResult(result, target);
 
             Console.ReadKey();
 
