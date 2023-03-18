@@ -29,5 +29,14 @@ namespace LargestAdjacentProduct
             }
             return nums;
         }
+
+        static int GetTarget()
+        {
+            Console.Write("Enter the target value: ");
+            int target = int.Parse(Console.ReadLine());
+            return target;
+        }
+
+
     }
 }
