@@ -17,5 +17,10 @@ namespace UserDefinedFunction
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static void GreetUser()
+        {
+            Console.WriteLine("Welcome Friends!");
+        }
     }
 }
