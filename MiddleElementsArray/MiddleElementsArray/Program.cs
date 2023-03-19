@@ -31,5 +31,15 @@ namespace MiddleElementsArray
 
             return arr;
         }
+
+        static int GetValidInput()
+        {
+            int num;
+            while (!int.TryParse(Console.ReadLine(), out num))
+            {
+                Console.Write("Invalid input. Enter an integer: ");
+            }
+            return num;
+        }
     }
 }
