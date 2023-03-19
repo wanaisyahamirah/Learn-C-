@@ -10,9 +10,16 @@ namespace MiddleElementsArray
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            // Get input from user
+            int[] arr1 = GetInput();
+            int[] arr2 = GetInput();
+            int[] arr3 = GetInput();
+
+            // Create new array of middle elements
+            int[] newArray = new int[] { arr1[1], arr2[1], arr3[1] };
+
+            PrintResult(newArray);
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
@@ -40,6 +47,12 @@ namespace MiddleElementsArray
                 Console.Write("Invalid input. Enter an integer: ");
             }
             return num;
+        }
+
+        static void PrintResult(int[] newArray)
+        {
+            // Print result
+            Console.WriteLine("New array: [{0}]", string.Join(", ", newArray));
         }
     }
 }
