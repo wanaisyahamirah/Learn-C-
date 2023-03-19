@@ -17,5 +17,19 @@ namespace MiddleElementsArray
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
+        static int[] GetInput()
+        {
+            Console.WriteLine("Enter three integers:");
+            int[] arr = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter integer {0}: ", i + 1);
+                arr[i] = GetValidInput();
+            }
+
+            return arr;
+        }
     }
 }
